@@ -22,6 +22,17 @@
     />
   </head>
   <body>
+    <div class="bg-shapes">
+      <div class="shape shape--square s1"></div>
+      <div class="shape shape--circle s2"></div>
+      <div class="shape shape--square s3"></div>
+      <div class="shape shape--circle s4"></div>
+      <div class="shape shape--square s5"></div>
+      <div class="shape shape--circle s6"></div>
+      <div class="shape shape--square s7"></div>
+      <div class="shape shape--circle s8"></div>
+    </div>
+
     <div class="title-box">
       <h1>Biodata</h1>
     </div>
@@ -73,11 +84,20 @@
     <div class="section">
       <div class="section-title">Audioku</div>
       <div class="media-frame">
-        <audio controls>
-          <source src="audio.mp3" type="audio/mpeg" />
+        <audio
+          controls
+          preload="metadata"
+          onerror="document.getElementById('audioErr').style.display = 'block'"
+        >
+          <source src="./assets/audioku.mp3" type="audio/mpeg" />
           Browser Anda tidak mendukung pemutar audio.
         </audio>
       </div>
+      <p class="audio-error" id="audioErr">
+        File audio.mp3 tidak ditemukan / gagal dimuat. Pastikan file audio.mp3
+        berada di folder yang sama dengan file HTML ini, lalu sesuaikan atribut
+        src pada tag &lt;source&gt; jika nama filenya berbeda.
+      </p>
     </div>
 
     <div class="section">
